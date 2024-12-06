@@ -18,7 +18,7 @@ package maps
 import "github.com/ugurcsen/gods-generic/containers"
 
 // Map interface that all maps implement
-type Map[K, T comparable] interface {
+type Map[K comparable, T any] interface {
 	Put(key K, value T)
 	Get(key K) (value T, found bool)
 	Remove(key K)

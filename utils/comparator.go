@@ -19,7 +19,7 @@ type ComparableNumber interface {
 	int | int8 | int16 | int32 | int64 | uint | uint8 | uint16 | uint32 | uint64 | float32 | float64
 }
 
-type Comparator[T comparable] func(a, b T) int
+type Comparator[T any] func(a, b T) int
 
 // StringComparator provides a fast comparison on strings
 func StringComparator(a, b string) int {
